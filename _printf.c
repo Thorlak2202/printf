@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdlib.h>
 
 /**
  * _printf - function that realized the all functions of the printf command
@@ -18,13 +19,22 @@ int i = 0;
 int j = 0;
 
 va_start(copy2, format);
-
-while (format && format[i])
+if (format == NULL)
 {
+	return (-1);
+}
+
+	while (format && format[i])
+{
+		if (format[i] == '%' && format[i + 1] != ty[j].ty && format[i + 1] == '%')
+		{
+			_putchar('%');
+			i += 2;
+		}
 	j = 0;
 	while (j < 2)
 	{
-		if (format[i + 1] == ty[j].ty && format[i] == '%')
+		if (format[i] == '%' && format[i + 1] == ty[j].ty && format[i + 1] != '%')
 		{
 			ty[j].f(copy2);
 		i += 2;
