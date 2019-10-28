@@ -24,8 +24,7 @@ int fun_char(va_list copy2)
  * Return: Size of string
  */
 
-void fun_str(va_list copy2)
-
+int fun_str(va_list copy2)
 {
 	char *p = va_arg(copy2, char *);
 	int x = 0;
