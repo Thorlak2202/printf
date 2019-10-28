@@ -23,15 +23,9 @@ int fun_char(va_list copy2)
  *
  * Return: Size of string
  */
-<<<<<<< HEAD
-int fun_str(va_list copy2)
-=======
-<<<<<<< HEAD
-int fun_str(va_list copy2)
-=======
+
 void fun_str(va_list copy2)
->>>>>>> 9044c878fc1085c05f1c848dcc46e803d25da377
->>>>>>> efd00adf86632c23fca6b22c62d992dd55b7e8e3
+
 {
 	char *p = va_arg(copy2, char *);
 	int x = 0;
@@ -54,12 +48,6 @@ while (p[x])
 	x++;
 }
 }
-<<<<<<< HEAD
 return (x);
-=======
-<<<<<<< HEAD
-return (x);
-=======
->>>>>>> 9044c878fc1085c05f1c848dcc46e803d25da377
->>>>>>> efd00adf86632c23fca6b22c62d992dd55b7e8e3
+
 }
