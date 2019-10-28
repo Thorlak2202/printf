@@ -41,6 +41,7 @@ while (p[x])
  * @copy2: entry value.
  */
 
+/*
 void fun_int(va_list copy2)
 {
 	int z = va_arg(copy2, int);
@@ -68,7 +69,7 @@ void fun_int(va_list copy2)
 		_putchar(m);
 		b = (b / 10);
 	}
-}
+} */
 
 /**
  * fun_double - function that prints base 10 int.
@@ -76,6 +77,7 @@ void fun_int(va_list copy2)
  * @copy2: entry value.
  */
 
+/*
 void fun_double(va_list copy2)
 {
 	int z = va_arg(copy2, int);
@@ -101,4 +103,4 @@ void fun_double(va_list copy2)
 		_putchar(m);
 		b = (b / 10);
 	}
-}
+}*/
