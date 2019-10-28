@@ -5,6 +5,11 @@
 #include <limits.h>
 #include <stdlib.h>
 
+/**
+* struct ty - structure used in the function printf
+* @ty:input of the structure
+* @f: input of pointer of the structure
+**/
 typedef struct ty
 {
 	char ty;
