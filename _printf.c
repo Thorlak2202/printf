@@ -11,8 +11,6 @@ int _printf(const char *format, ...)
 ty_t ty[] = {
 {'c', fun_char},
 {'s', fun_str},
-/*{'d', fun_double},
-{'i', fun_int},*/
 };
 
 va_list copy2;
