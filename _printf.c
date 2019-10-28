@@ -17,6 +17,7 @@ ty_t ty[] = {
 va_list copy2;
 int i = 0;
 int j = 0;
+int count = 0;
 
 va_start(copy2, format);
 if (format == NULL)
@@ -36,7 +37,7 @@ if (format == NULL)
 	{
 		if (format[i] == '%' && format[i + 1] == ty[j].ty && format[i + 1] != '%')
 		{
-			ty[j].f(copy2);
+			count += ty[j].f(copy2);
 		i += 2;
 		}
 	j++;
@@ -45,5 +46,5 @@ _putchar(format[i]);
 i++;
 }
 va_end(copy2);
-return (i);
+return (i + count - 2);
 }
