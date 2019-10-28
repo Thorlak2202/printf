@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
- * main - Entry point
+ * _printf - function that realized the all functions of the printf command
+ * @format: input of the function
  *
- * Return: Always 0
+ * Return: Always i
  */
 int _printf(const char *format, ...)
 {
@@ -25,12 +26,12 @@ while (format && format[i])
 	j = 0;
 	while (j < 4)
 	{
-		if (format[i + 1] == ty[j].ty && format [i] == '%')
+		if (format[i + 1] == ty[j].ty && format[i] == '%')
 		{
 			ty[j].f(copy2);
-            i += 2;
-        }
-        j++;
+		i += 2;
+		}
+	j++;
 	}
 _putchar(format[i]);
 i++;
