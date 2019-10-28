@@ -21,9 +21,10 @@ int j = 0;
 va_start(copy2, format);
 if (format == NULL)
 {
-	return(-1);
+	return (-1);
 }
-while (format && format[i])
+
+	while (format && format[i])
 {
 		if (format[i] == '%' && format[i + 1] != ty[j].ty && format[i + 1] == '%')
 		{
