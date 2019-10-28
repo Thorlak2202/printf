@@ -11,8 +11,6 @@ int _printf(const char *format, ...)
 ty_t ty[] = {
 {'c', fun_char},
 {'s', fun_str},
-{'d', fun_double},
-{'i', fun_int},
 };
 
 va_list copy2;
@@ -24,7 +22,7 @@ va_start(copy2, format);
 while (format && format[i])
 {
 	j = 0;
-	while (j < 4)
+	while (j < 2)
 	{
 		if (format[i + 1] == ty[j].ty && format[i] == '%')
 		{
