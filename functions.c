@@ -43,15 +43,31 @@ while (p[x])
 
 void fun_int(va_list copy2)
 {
-	int *p = va_arg(copy2, int *);
-	int x = 0;
+	int z = va_arg(copy2, int);
+	int i = 0;
+	int m = z;
+	int b = z;
+	int q = 0;
 
-	while (p[x])
+	printf("%d\n", b);
+	if (z < 0)
 	{
-		_putchar(x);
-		p++;
+		_putchar('-');
 	}
-	x++;
+
+	while (z != 0)
+	{
+		z = (z / 10);
+		i++;
+	}
+
+	while (q < i)
+	{
+		m = (b % 10) + '0';
+		q++;
+		_putchar(m);
+		b = (b / 10);
+	}
 }
 
 /**
@@ -64,8 +80,9 @@ void fun_double(va_list copy2)
 {
 	int z = va_arg(copy2, int);
 	int i = 0;
-	int m = -z;
-	int b = -z;
+	int m = z;
+	int q = 0;
+	int b = z;
 
 	if (z < 0)
 	{
@@ -76,7 +93,6 @@ void fun_double(va_list copy2)
 		z = (z / 10);
 		i++;
 	}
-	int q = 0;
 
 	while (q < i)
 	{
