@@ -13,12 +13,13 @@
 typedef struct ty
 {
 	char ty;
-	void (*f)(va_list copy2);
+	int (*f)(va_list copy2);
 } ty_t;
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-void fun_char(va_list copy2);
-void fun_str(va_list copy2);
+int fun_char(va_list copy2);
+int fun_str(va_list copy2);
+
 
 #endif
