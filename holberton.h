@@ -20,7 +20,7 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 void fun_char(va_list copy2);
 void fun_str(va_list copy2);
-void fun_int(va_list copy2);
-void fun_double(va_list copy2);
+/*void fun_int(va_list copy2);
+void fun_double(va_list copy2);*/
 
 #endif
