@@ -27,12 +27,12 @@ int fun_char(va_list copy2)
 int fun_str(va_list copy2)
 {
 	char *p = va_arg(copy2, char *);
+	int g = 0;
 	int x = 0;
 
 if (p == NULL)
 {
 	char *f = "(null)";
-	int g = 0;
 
 	while (f[g])
 	{
@@ -48,6 +48,5 @@ while (p[x])
 	x++;
 }
 }
-return (x);
+return (x + g);
 }
-
