@@ -13,38 +13,38 @@ ty_t ty[] = {
 {'c', fun_char},
 {'s', fun_str},
 };
-
 va_list copy2;
 int i = 0;
 int j = 0;
-int count = 0;
-
+int k = 0;
+int v1 = 0;
 va_start(copy2, format);
+
 if (format == NULL)
 {
 	return (-1);
 }
-
-	while (format && format[i])
+while (format && format[i])
 {
-		if (format[i] == '%' && format[i + 1] != ty[j].ty && format[i + 1] == '%')
-		{
-			_putchar('%');
-			i += 2;
-		}
 	j = 0;
 	while (j < 2)
 	{
-		if (format[i] == '%' && format[i + 1] == ty[j].ty && format[i + 1] != '%')
+		if (format[k] == '%' && format[k + 1] == '%')
 		{
-			count += ty[j].f(copy2);
-		i += 2;
+			_putchar('%');
+			k += 2;
 		}
-	j++;
+		else if (format[i] == '%' && format[i + 1] == ty[j].ty)
+		{
+			ty[j].f(copy2);
+			i += 2;
+		}
+		j++;
 	}
-_putchar(format[i]);
-i++;
+	_putchar(format[i]);
+	i++;
 }
 va_end(copy2);
-return (i + count - 2);
+v1 = i + k + j - 1;
+return (v1);
 }
