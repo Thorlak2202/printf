@@ -28,6 +28,7 @@ int fun_str(va_list copy2)
 {
 	char *p = va_arg(copy2, char *);
 	int x = 0;
+
 if (p == NULL)
 {
 	char *f = "(null)";
@@ -48,5 +49,4 @@ while (p[x])
 }
 }
 return (x);
-
 }

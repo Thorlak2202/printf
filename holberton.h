@@ -21,5 +21,4 @@ int _putchar(char c);
 int fun_char(va_list copy2);
 int fun_str(va_list copy2);
 
-
 #endif
