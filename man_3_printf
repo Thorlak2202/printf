@@ -27,6 +27,9 @@ where %x denotes the option to be printed, and [var] is the variable with the va
 .SH DESCRIPTION
 _printf was created as a part of a project for Holberon School, we intend to replicate the usage of the printf() function in the <stdio.h> library.
 
+.SH RETURN
+_printf returns the number of characters printed (excluding the null byte used to end output to strings).
+
 .SH FUNCTIONS
 printf has built in a series of functions to secure it's performance.
 
@@ -54,6 +57,59 @@ except this function is called for base 10 integers.
 
 .SH SEE ALSO
 .I https://github.com/Thorlak2202/printf
+
+.SH EXAMPLES
+s
+.PP
+s
+.PP
+r1: 2, r2: 2
+.PP
+string f string2
+string f string2
+.PP
+r1: 17, r2: 17
+.PP
+string 0 string2
+string 0 string2
+.PP
+r1: 17, r2: 17
+.PP
+letras letras letras
+letras letras letras
+.PP
+r1: 21, r2: 21
+.PP
+letras %
+letras %
+.PP
+r1: 9, r2: 9
+.PP
+cstcstestcscscsc
+cstcstestcscscsc
+.PP
+r1: 17, r2: 17
+.PP
+
+
+.PP
+r1: 2, r2: 2
+.PP
+%!
+%!
+.PP
+r1: 3, r2: 3
+.PP
+letras (null) letras
+letras (null) letras
+.PP
+r1: 21, r2: 21
+.PP
+%K
+%K
+.PP
+r1: 3, r2: 3
+.PP
 
 .SH BUGS
 when tested with edge cases, no BUGS were found;
