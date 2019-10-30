@@ -14,6 +14,7 @@
 
 int fun_char(va_list copy2)
 {
+
 	_putchar(va_arg(copy2, int));
 	return (1);
 }
@@ -49,4 +50,40 @@ while (p[x])
 }
 }
 return (x + g);
+}
+
+int fun_d(va_list copy2) 
+{
+	unsigned int count1 = 0, v1 = 0, v2 = 0, count2 = 0, v3 = 0;
+	int z = va_arg(copy2, int);
+
+	if (z < 0)
+	{
+		v1 = (z * -1);
+		count1 += _putchar('-');
+	}
+	else
+	{
+		v1 = z;
+	}
+	v2 = v1;
+	count2 = 1;
+	while(v2 > 9)
+	{
+		v2 = (v2 / 10);
+		count2 = (count2 * 10);
+	} 
+	while (count2 >= 1)
+	{	
+	
+		v3 = (((v1 / count2) % 10) + '0');
+		count1 += _putchar(v3);
+		count2 = (count2 / 10);
+	}
+	return (count1);
+}
+
+int fun_int(va_list copy2)
+{
+	return (fun_d(copy2));
 }
