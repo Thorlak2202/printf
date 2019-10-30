@@ -1,0 +1,73 @@
+.TH man 1 "Spooky 30 Oct 2010" "0.1" "_printf man page"
+.SH NAME
+.B _printf
+- produces output according to the format requested.
+
+.SH SYNOPSIS
+#include "holberton.h"
+
+.SH USAGE  	
+
+_printf("%x", [var]);
+.PP
+_printf("string");
+.PP
+_printf("%c", 'H')
+.PP
+_printf("%s", "Holbypro");
+.PP
+x = 4;
+.BR
+_printf("%i", x);
+.PP
+_printf("Negative:[%d]", -762534);
+
+where %x denotes the option to be printed, and [var] is the variable with the value, or the value itself.
+
+.SH DESCRIPTION
+_printf was created as a part of a project for Holberon School, we intend to replicate the usage of the printf() function in the <stdio.h> library.
+
+.SH FUNCTIONS
+printf has built in a series of functions to secure it's performance.
+
+.PP
+fun_str - this function is called when the '%s' is used, it prompts for the string sent, and evaluates
+character by character, making sure it prints the correct output.
+.PP
+fun_char - this function is called when the '%c' is used, it promts for the character sent, and prints
+the correct output.
+.PP
+fun_int - this function is called when the '%i' is used, it prompts for the numbers sent, and evaluates
+integer by integer, making sure it prints the correct output.
+.PP
+fun_d - this function is calle when the '%d' is used, this function has a similar response as fun_int,
+except this function is called for base 10 integers.
+
+.SH OPTIONS
+-%s to print  a string.
+.PP
+-%c to print a character.
+.PP
+-%i to print an integer.
+.PP
+-%d to print a base 10 integer.
+
+.SH SEE ALSO
+.I https://github.com/Thorlak2202/printf
+
+.SH BUGS
+when tested with edge cases, no BUGS were found;
+to report the finding of any BUG, please reach any of the next E-mail:
+.PP
+1152@holbertonschool.com,
+1141@holbertonschool.com.
+.PP
+with the edge case tested to output any BUG.
+
+.SH AUTHORS
+Andres Garcia Rendon, Christian Suarez [Holberton School Medellin, Cohort 10 Students.] #holbyro.
+
+.SH SPECIAL THANKS
+To our peers who helped us through the process when whe felt stuck.
+.PP
+To the Founders and Staff of Holberton School and Holberton School Medellín.
