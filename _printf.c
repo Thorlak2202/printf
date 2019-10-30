@@ -6,21 +6,15 @@
  */
 int _printf(const char *format, ...)
 {
-	ty_t ty[] = {
-		{'c', fun_char},
-		{'s', fun_str},
-		{'d', fun_d},
-		{'i', fun_int}
-		};
+	ty_t ty[] = {{'c', fun_char}, {'s', fun_str}, {'d', fun_d}, {'i', fun_int}};
 
 	va_list copy2;
 	int i = 0, j, count = 0, v1 = 0;
 
 	va_start(copy2, format);
 	if (format == NULL)
-	{
-		return (-1);
-	}
+	return (-1);
+
 		while (format && format[i])
 	{
 			if (format[i] == '%' && format[i + 1] == '\0')
@@ -38,8 +32,7 @@ int _printf(const char *format, ...)
 					{
 						count += ty[j].f(copy2);
 						i++;
-						v1 = 1;
-					}
+						v1 = 1;	}
 				}
 				if (v1 == 0)
 				{
