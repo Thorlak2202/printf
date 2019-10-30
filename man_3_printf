@@ -6,7 +6,7 @@
 .SH SYNOPSIS
 #include "holberton.h"
 
-.SH USAGE  	
+.SH USAGE
 
 _printf("%x", [var]);
 .PP
